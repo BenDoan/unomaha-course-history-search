@@ -1,3 +1,5 @@
+**Course listing up to date as of 2015-11-08**
+
 Searches for terms when a course was last taught.
 
 Uses BenDoan/unomaha-course-scraper to get the list of courses.
