@@ -25,7 +25,8 @@ def get_term(course):
                 ('may', "jun"): "Summer",
                 ('may', 'jul'): "Summer",
                 ('may', 'aug'): "Summer",
-                ('jul', 'aug'): "Summer"
+                ('jul', 'aug'): "Summer",
+                ('jun', 'aug'): "Summer"
                 }
 
     term = "Unknown"
@@ -56,7 +57,7 @@ def _main():
                 print(get_term(matching_course))
                 print(matching_course['title'])
 
-                max_teach_len = max(map(len, (x['Instructor'] for x in matching_course['sections'].values())))
+                max_teach_len = max(map(len, (x['Instructor'] for x in matching_course['sections'].values() if 'Instructor' in x)))
                 for section_number, section in matching_course['sections'].items():
                     if 'Instructor' in section:
                         print("Section {} - {:<{}s} ({}/{})"
